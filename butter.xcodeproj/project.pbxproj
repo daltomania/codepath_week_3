@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9D19D31F1BA1E20E0038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D31E1BA1E20E0038A5E8 /* AppDelegate.swift */; };
-		9D19D3211BA1E20E0038A5E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D3201BA1E20E0038A5E8 /* ViewController.swift */; };
 		9D19D3241BA1E20E0038A5E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D19D3221BA1E20E0038A5E8 /* Main.storyboard */; };
 		9D19D3261BA1E20E0038A5E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D19D3251BA1E20E0038A5E8 /* Images.xcassets */; };
 		9D19D3291BA1E20E0038A5E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D19D3271BA1E20E0038A5E8 /* LaunchScreen.xib */; };
 		9D19D3351BA1E20E0038A5E8 /* butterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D3341BA1E20E0038A5E8 /* butterTests.swift */; };
+		9D19D3401BA1E23A0038A5E8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D33F1BA1E23A0038A5E8 /* LoginController.swift */; };
+		9D19D3421BA1E2890038A5E8 /* TimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D3411BA1E2890038A5E8 /* TimelineController.swift */; };
+		F613C280A40E29695E6B710D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E97C4C531020B16E1E5301 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,18 @@
 		9D19D3191BA1E20E0038A5E8 /* butter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = butter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D19D31D1BA1E20E0038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D19D31E1BA1E20E0038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D19D3201BA1E20E0038A5E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D19D3231BA1E20E0038A5E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D19D3251BA1E20E0038A5E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D19D3281BA1E20E0038A5E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9D19D32E1BA1E20E0038A5E8 /* butterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = butterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D19D3331BA1E20E0038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D19D3341BA1E20E0038A5E8 /* butterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = butterTests.swift; sourceTree = "<group>"; };
+		9D19D33F1BA1E23A0038A5E8 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		9D19D3411BA1E2890038A5E8 /* TimelineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineController.swift; sourceTree = "<group>"; };
+		9DCA3A8C1BA1E53400A09FA5 /* butter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "butter-Bridging-Header.h"; sourceTree = "<group>"; };
+		C7AAEE5D1CEFBCEEBC1DCB09 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E1E97C4C531020B16E1E5301 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7A82DF45B3EB98C55C4F3C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F613C280A40E29695E6B710D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +64,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6317D857CE4E7A10B73C3CC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1E97C4C531020B16E1E5301 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		866C50974C6471F395DB864B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7A82DF45B3EB98C55C4F3C4 /* Pods.debug.xcconfig */,
+				C7AAEE5D1CEFBCEEBC1DCB09 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9D19D3101BA1E20E0038A5E8 = {
 			isa = PBXGroup;
 			children = (
 				9D19D31B1BA1E20E0038A5E8 /* butter */,
 				9D19D3311BA1E20E0038A5E8 /* butterTests */,
 				9D19D31A1BA1E20E0038A5E8 /* Products */,
+				866C50974C6471F395DB864B /* Pods */,
+				6317D857CE4E7A10B73C3CC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +104,14 @@
 		9D19D31B1BA1E20E0038A5E8 /* butter */ = {
 			isa = PBXGroup;
 			children = (
+				9D19D3431BA1E3800038A5E8 /* API */,
+				9D19D33E1BA1E21D0038A5E8 /* View Controllers */,
 				9D19D31E1BA1E20E0038A5E8 /* AppDelegate.swift */,
-				9D19D3201BA1E20E0038A5E8 /* ViewController.swift */,
 				9D19D3221BA1E20E0038A5E8 /* Main.storyboard */,
 				9D19D3251BA1E20E0038A5E8 /* Images.xcassets */,
 				9D19D3271BA1E20E0038A5E8 /* LaunchScreen.xib */,
 				9D19D31C1BA1E20E0038A5E8 /* Supporting Files */,
+				9DCA3A8C1BA1E53400A09FA5 /* butter-Bridging-Header.h */,
 			);
 			path = butter;
 			sourceTree = "<group>";
@@ -112,6 +141,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9D19D33E1BA1E21D0038A5E8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D19D33F1BA1E23A0038A5E8 /* LoginController.swift */,
+				9D19D3411BA1E2890038A5E8 /* TimelineController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9D19D3431BA1E3800038A5E8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D19D3381BA1E20E0038A5E8 /* Build configuration list for PBXNativeTarget "butter" */;
 			buildPhases = (
+				2A8E044041FD315E86F04AA7 /* Check Pods Manifest.lock */,
 				9D19D3151BA1E20E0038A5E8 /* Sources */,
 				9D19D3161BA1E20E0038A5E8 /* Frameworks */,
 				9D19D3171BA1E20E0038A5E8 /* Resources */,
+				DF45F63BA633DCA840604DB5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +254,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A8E044041FD315E86F04AA7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF45F63BA633DCA840604DB5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D19D3151BA1E20E0038A5E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D19D3211BA1E20E0038A5E8 /* ViewController.swift in Sources */,
+				9D19D3421BA1E2890038A5E8 /* TimelineController.swift in Sources */,
 				9D19D31F1BA1E20E0038A5E8 /* AppDelegate.swift in Sources */,
+				9D19D3401BA1E23A0038A5E8 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,21 +419,28 @@
 		};
 		9D19D3391BA1E20E0038A5E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A82DF45B3EB98C55C4F3C4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = butter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "butter/butter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9D19D33A1BA1E20E0038A5E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7AAEE5D1CEFBCEEBC1DCB09 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = butter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "butter/butter-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +497,7 @@
 				9D19D33A1BA1E20E0038A5E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D19D33B1BA1E20E0038A5E8 /* Build configuration list for PBXNativeTarget "butterTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +506,7 @@
 				9D19D33D1BA1E20E0038A5E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
