@@ -48,18 +48,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Org-er-0Vf">
-                                <rect key="frame" x="136" y="269" width="49" height="30"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onLogout:" destination="tyZ-Hs-UE5" eventType="touchUpInside" id="fx2-Vh-125"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhz-Om-pmQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-uK-Ba4">
+                                        <rect key="frame" x="281" y="18" width="31" height="30"/>
+                                        <state key="normal" title="New">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Org-er-0Vf">
+                                        <rect key="frame" x="8" y="18" width="49" height="30"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLogout:" destination="tyZ-Hs-UE5" eventType="touchUpInside" id="fx2-Vh-125"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.53333333333333333" green="0.77254901960784317" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Org-er-0Vf" firstAttribute="leading" secondItem="dhz-Om-pmQ" secondAttribute="leading" constant="8" id="3Om-nl-PmU"/>
+                                    <constraint firstAttribute="height" constant="55" id="9u2-1L-Ajo"/>
+                                    <constraint firstAttribute="trailing" secondItem="OZB-uK-Ba4" secondAttribute="trailing" constant="8" id="Aoq-7U-rD6"/>
+                                    <constraint firstItem="OZB-uK-Ba4" firstAttribute="top" secondItem="dhz-Om-pmQ" secondAttribute="top" constant="18" id="J4F-Hv-1ua"/>
+                                    <constraint firstItem="Org-er-0Vf" firstAttribute="top" secondItem="dhz-Om-pmQ" secondAttribute="top" constant="18" id="iHv-mO-uh2"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-YR-J8w">
+                                <rect key="frame" x="0.0" y="55" width="320" height="513"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TweetCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="70" id="1OV-Io-Wgk" customClass="TweetCell" customModule="butter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1OV-Io-Wgk" id="q3O-gd-Yyl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barack Obama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhB-eC-ynS">
+                                                    <rect key="frame" x="67" y="24" width="115" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="FhB-eC-ynS" id="w42-vd-wB0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dhz-Om-pmQ" firstAttribute="leading" secondItem="2KV-e8-k8y" secondAttribute="leading" id="0Ti-DM-GVg"/>
+                            <constraint firstItem="WRN-YR-J8w" firstAttribute="leading" secondItem="2KV-e8-k8y" secondAttribute="leading" id="2Va-3b-5ER"/>
+                            <constraint firstAttribute="trailing" secondItem="dhz-Om-pmQ" secondAttribute="trailing" id="Kwm-J0-yqU"/>
+                            <constraint firstItem="WRN-YR-J8w" firstAttribute="top" secondItem="dhz-Om-pmQ" secondAttribute="bottom" id="TYn-lg-QGf"/>
+                            <constraint firstItem="JLe-Ve-Qrb" firstAttribute="top" secondItem="WRN-YR-J8w" secondAttribute="bottom" id="VoU-Z3-fa9"/>
+                            <constraint firstItem="dhz-Om-pmQ" firstAttribute="top" secondItem="2KV-e8-k8y" secondAttribute="top" id="Y1L-aM-aaK"/>
+                            <constraint firstAttribute="trailing" secondItem="WRN-YR-J8w" secondAttribute="trailing" id="hNI-of-tdL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="WRN-YR-J8w" id="Je5-x8-9a5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnN-Ag-vaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

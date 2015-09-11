@@ -8,23 +8,43 @@
 
 import UIKit
 
-class TimelineController: UIViewController {
+class TimelineController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var tweets: [Tweet]?
+    var tweets: [Tweet]!
     
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
             self.tweets = tweets
+            self.tableView.reloadData()
         })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let tweets = tweets {
+            return tweets.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
+        cell.tweet = tweets[indexPath.row]
+        
+        return cell
     }
     
     /*
