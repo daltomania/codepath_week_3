@@ -10,19 +10,23 @@ import UIKit
 
 class TimelineController: UIViewController {
 
+    var tweets: [Tweet]?
+    
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
+            self.tweets = tweets
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-
     /*
     // MARK: - Navigation
 

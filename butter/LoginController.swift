@@ -9,8 +9,6 @@
 import UIKit
 
 class LoginController: UIViewController {
-
-    var tweets: [Tweet]?
     
     @IBAction func onLogin(sender: AnyObject) {
         TwitterClient.sharedInstance.loginWithCompletion() {
@@ -25,9 +23,6 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
-            self.tweets = tweets
-        })
     }
 
     override func didReceiveMemoryWarning() {
