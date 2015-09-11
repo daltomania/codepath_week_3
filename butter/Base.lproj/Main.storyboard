@@ -29,7 +29,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="tyZ-Hs-UE5" kind="modal" id="fZg-bM-rO6"/>
+                        <segue destination="tyZ-Hs-UE5" kind="modal" identifier="loginSegue" id="fZg-bM-rO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -39,7 +39,7 @@
         <!--Timeline Controller-->
         <scene sceneID="Nwd-E0-wKA">
             <objects>
-                <viewController id="tyZ-Hs-UE5" customClass="TimelineController" customModule="butter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimelineViewController" id="tyZ-Hs-UE5" customClass="TimelineController" customModule="butter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6xn-rT-hff"/>
                         <viewControllerLayoutGuide type="bottom" id="JLe-Ve-Qrb"/>
