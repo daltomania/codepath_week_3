@@ -76,23 +76,64 @@
                                     <constraint firstItem="Org-er-0Vf" firstAttribute="top" secondItem="dhz-Om-pmQ" secondAttribute="top" constant="18" id="iHv-mO-uh2"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-YR-J8w">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-YR-J8w">
                                 <rect key="frame" x="0.0" y="55" width="320" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TweetCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="70" id="1OV-Io-Wgk" customClass="TweetCell" customModule="butter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="TweetCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="110" id="1OV-Io-Wgk" customClass="TweetCell" customModule="butter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1OV-Io-Wgk" id="q3O-gd-Yyl">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barack Obama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhB-eC-ynS">
-                                                    <rect key="frame" x="67" y="24" width="115" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barack Obama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhB-eC-ynS">
+                                                    <rect key="frame" x="66" y="8" width="84.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-si-Bcd">
+                                                    <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="Ap8-uH-ltE"/>
+                                                        <constraint firstAttribute="width" constant="48" id="lHF-kv-Ibo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@barackobama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njp-cN-ATb">
+                                                    <rect key="frame" x="158" y="8" width="86" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a tweet. This is a tweet. This is a tweet" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-5O-0nx">
+                                                    <rect key="frame" x="66" y="22" width="224" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYb-Vq-aDh">
+                                                    <rect key="frame" x="298" y="8" width="14" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FhB-eC-ynS" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="0Nj-bv-fmC"/>
+                                                <constraint firstItem="fYb-Vq-aDh" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="0qt-iE-v8f"/>
+                                                <constraint firstItem="fYb-Vq-aDh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="njp-cN-ATb" secondAttribute="trailing" constant="8" id="32C-pB-53v"/>
+                                                <constraint firstItem="iMb-5O-0nx" firstAttribute="leading" secondItem="4Mb-si-Bcd" secondAttribute="trailing" constant="10" id="92h-Yk-ZWX"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iMb-5O-0nx" secondAttribute="trailing" constant="8" id="Gxd-Bu-nnp"/>
+                                                <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Hbl-Mo-vMK"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Mb-si-Bcd" secondAttribute="bottom" constant="8" id="Kgf-u9-jt9"/>
+                                                <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Qoi-3Y-T6G"/>
+                                                <constraint firstItem="4Mb-si-Bcd" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leading" constant="8" id="XGX-fO-PfB"/>
+                                                <constraint firstItem="njp-cN-ATb" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="kON-SF-CkL"/>
+                                                <constraint firstAttribute="trailing" secondItem="fYb-Vq-aDh" secondAttribute="trailing" constant="8" id="lKp-Hg-9Q0"/>
+                                                <constraint firstItem="4Mb-si-Bcd" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="rre-t0-d3Y"/>
+                                                <constraint firstItem="iMb-5O-0nx" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="22" id="teG-dd-IdF"/>
+                                                <constraint firstItem="FhB-eC-ynS" firstAttribute="leading" secondItem="4Mb-si-Bcd" secondAttribute="trailing" constant="10" id="zkh-CG-U3u"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="FhB-eC-ynS" id="w42-vd-wB0"/>

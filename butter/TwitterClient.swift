@@ -30,6 +30,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     
     func homeTimelineWithParams(params: NSDictionary?, completion: (tweets: [Tweet]?, error: NSError?) -> ()) {
         GET("1.1/statuses/home_timeline.json", parameters: params, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            println(response)
             var tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
             completion(tweets: tweets, error: nil)
             }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
@@ -70,8 +71,6 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
                     println("error getting current user")
                     self.loginCompletion?(user: nil, error: error)
             })
-            
-
             
             }) { (error: NSError!) -> Void in
                 println("FAILED TO GET AN ACCESS TOKEN :(")
