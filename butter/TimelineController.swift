@@ -10,26 +10,39 @@ import UIKit
 
 class TimelineController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var refreshControl: UIRefreshControl!
     var tweets: [Tweet]!
     
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }
-    
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
-            self.tweets = tweets
-            self.tableView.reloadData()
-        })
+        // pull to reload
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "loadTweets", forControlEvents: UIControlEvents.ValueChanged)
+        let dummyTableVC = UITableViewController()
+        dummyTableVC.tableView = tableView
+        dummyTableVC.refreshControl = refreshControl
+        
+        loadTweets()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func loadTweets() {
+        TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
+            self.tweets = tweets
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        })
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
