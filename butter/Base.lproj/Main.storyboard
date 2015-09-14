@@ -333,7 +333,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIo-kX-9hJ">
-                                <rect key="frame" x="135" y="172" width="16" height="22"/>
+                                <rect key="frame" x="135" y="173" width="16" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="PSn-iU-yCl"/>
                                     <constraint firstAttribute="height" constant="22" id="krQ-0w-kSl"/>
@@ -341,6 +341,9 @@
                                 <state key="normal" image="favorite">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="favoriteButton:" destination="IyI-jT-6qD" eventType="touchUpInside" id="mQx-gm-Zck"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

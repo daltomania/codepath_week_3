@@ -19,6 +19,9 @@ class TweetDetailController: UIViewController {
     @IBAction func retweetButton(sender: AnyObject) {
         retweet()
     }
+    @IBAction func favoriteButton(sender: AnyObject) {
+        favorite()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         createdAtLabel.text = tweet?.createdAtString
@@ -38,9 +41,18 @@ class TweetDetailController: UIViewController {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
         TwitterClient.sharedInstance.retweetTweet(params) { (success, error) -> () in
-            println("whooooooooooooo")
+            println("retweet!!!!!!")
         }
     }
+    
+    func favorite() {
+        let id: String = "\(tweet!.id!)"
+        let params: [String: String] = ["id": id]
+        TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
+            println("favorite created!!!!!!!!")
+        })
+    }
+    
     
     /*
     // MARK: - Navigation
