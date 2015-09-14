@@ -168,6 +168,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gAw-DS-Ku5">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="cC2-IX-eRP"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fij-c0-M4V">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n9y-ib-KUE">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>

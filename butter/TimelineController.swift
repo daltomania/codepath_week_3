@@ -31,6 +31,7 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
         dummyTableVC.refreshControl = refreshControl
         
         loadTweets()
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
     }
 
     override func didReceiveMemoryWarning() {
