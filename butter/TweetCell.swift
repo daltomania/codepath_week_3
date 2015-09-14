@@ -16,6 +16,24 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var timeAgoLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     
+    @IBAction func replyButton(sender: AnyObject) {
+    }
+    
+    @IBAction func retweetButton(sender: AnyObject) {
+        let id: String = "\(tweet!.id!)"
+        let params: [String: String] = ["id": id]
+        TwitterClient.sharedInstance.retweetTweet(params) { (success, error) -> () in
+            println("retweet!!!!!!")
+        }
+    }
+    
+    @IBAction func favoriteButton(sender: AnyObject) {
+        let id: String = "\(tweet!.id!)"
+        let params: [String: String] = ["id": id]
+        TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
+            println("favorite created!!!!!!!!")
+        })
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.layer.cornerRadius = 3

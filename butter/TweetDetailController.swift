@@ -22,6 +22,10 @@ class TweetDetailController: UIViewController {
     @IBAction func favoriteButton(sender: AnyObject) {
         favorite()
     }
+    @IBAction func replyButton(sender: AnyObject) {
+        reply()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createdAtLabel.text = tweet?.createdAtString
@@ -51,6 +55,10 @@ class TweetDetailController: UIViewController {
         TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
             println("favorite created!!!!!!!!")
         })
+    }
+    
+    func reply() {
+        println("you should do something here")
     }
     
     

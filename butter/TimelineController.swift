@@ -17,7 +17,7 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
         User.currentUser?.logout()
     }
     @IBOutlet weak var tableView: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
