@@ -216,10 +216,28 @@
                                 <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h03-gn-e8W">
+                                <rect key="frame" x="16" y="128" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qqY-HB-A0w"/>
+                    <navigationItem key="navigationItem" id="qqY-HB-A0w">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="9og-PO-QS1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kqb-oq-VS1">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTweet:" destination="ZlT-MI-KZD" eventType="touchUpInside" id="hNT-cQ-drg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="avatarImageView" destination="Feo-wG-d9p" id="3BK-BD-bu3"/>
                         <outlet property="nameLabel" destination="EHy-M1-swi" id="4HO-Oj-bEu"/>

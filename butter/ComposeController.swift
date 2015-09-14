@@ -10,6 +10,9 @@ import UIKit
 
 class ComposeController: UIViewController {
 
+    @IBAction func onTweet(sender: AnyObject) {
+        println("Tweeeeeeeeeet")
+    }
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
