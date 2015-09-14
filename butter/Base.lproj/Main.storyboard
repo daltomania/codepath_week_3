@@ -141,7 +141,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKX-E5-FW1">
-                                                    <rect key="frame" x="127" y="59" width="19" height="22"/>
+                                                    <rect key="frame" x="137" y="59" width="19" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="19" id="M2g-ar-wt4"/>
                                                         <constraint firstAttribute="height" constant="22" id="WIH-VJ-LoU"/>
@@ -154,7 +154,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR7-yu-JYK">
-                                                    <rect key="frame" x="191" y="59" width="16" height="22"/>
+                                                    <rect key="frame" x="211" y="59" width="16" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="3lb-OW-Kub"/>
                                                         <constraint firstAttribute="width" constant="16" id="HMm-BU-ch8"/>
@@ -173,13 +173,13 @@
                                                 <constraint firstItem="fYb-Vq-aDh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="njp-cN-ATb" secondAttribute="trailing" constant="8" id="32C-pB-53v"/>
                                                 <constraint firstItem="iMb-5O-0nx" firstAttribute="leading" secondItem="4Mb-si-Bcd" secondAttribute="trailing" constant="10" id="92h-Yk-ZWX"/>
                                                 <constraint firstItem="IKX-E5-FW1" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="CL9-wm-Trx"/>
-                                                <constraint firstItem="gR7-yu-JYK" firstAttribute="leading" secondItem="IKX-E5-FW1" secondAttribute="trailing" constant="45" id="FB0-Wf-ylB"/>
+                                                <constraint firstItem="gR7-yu-JYK" firstAttribute="leading" secondItem="IKX-E5-FW1" secondAttribute="trailing" constant="55" id="FB0-Wf-ylB"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iMb-5O-0nx" secondAttribute="trailing" constant="8" id="Gxd-Bu-nnp"/>
                                                 <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Hbl-Mo-vMK"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Mb-si-Bcd" secondAttribute="bottom" constant="8" id="Kgf-u9-jt9"/>
                                                 <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Qoi-3Y-T6G"/>
                                                 <constraint firstItem="uWk-AN-IBP" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leadingMargin" constant="58" id="Qx6-Xr-XrN"/>
-                                                <constraint firstItem="IKX-E5-FW1" firstAttribute="leading" secondItem="uWk-AN-IBP" secondAttribute="trailing" constant="45" id="VLi-ih-DHO"/>
+                                                <constraint firstItem="IKX-E5-FW1" firstAttribute="leading" secondItem="uWk-AN-IBP" secondAttribute="trailing" constant="55" id="VLi-ih-DHO"/>
                                                 <constraint firstItem="4Mb-si-Bcd" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leading" constant="8" id="XGX-fO-PfB"/>
                                                 <constraint firstItem="gR7-yu-JYK" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="YHd-Hq-KXc"/>
                                                 <constraint firstItem="uWk-AN-IBP" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="csf-jc-SOu"/>
