@@ -38,6 +38,17 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         }
     }
     
+    func retweetTweet(params: [String:String], completion: (success: String?, error: NSError?) -> ()) {
+        let tweetId: String = params["id"]!
+        POST("1.1/statuses/retweet/\(tweetId).json", parameters: params, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            completion(success: "yay", error: nil)
+            }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                println("error creating tweet")
+                println(error.description)
+                completion(success: nil, error: error)
+        }
+    }
+    
     func homeTimelineWithParams(params: NSDictionary?, completion: (tweets: [Tweet]?, error: NSError?) -> ()) {
         GET("1.1/statuses/home_timeline.json", parameters: params, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             var tweets = Tweet.tweetsWithArray(response as! [NSDictionary])

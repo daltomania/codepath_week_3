@@ -16,6 +16,9 @@ class TweetDetailController: UIViewController {
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBAction func retweetButton(sender: AnyObject) {
+        retweet()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         createdAtLabel.text = tweet?.createdAtString
@@ -29,6 +32,14 @@ class TweetDetailController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func retweet() {
+        let id: String = "\(tweet!.id!)"
+        let params: [String: String] = ["id": id]
+        TwitterClient.sharedInstance.retweetTweet(params) { (success, error) -> () in
+            println("whooooooooooooo")
+        }
     }
     
     /*
