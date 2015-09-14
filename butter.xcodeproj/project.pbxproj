@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D0C0ABF1BA7439700DBBB18 /* TweetDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C0ABE1BA7439700DBBB18 /* TweetDetailController.swift */; };
+		9D0C0AC11BA7507D00DBBB18 /* ComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C0AC01BA7507D00DBBB18 /* ComposeController.swift */; };
 		9D19D31F1BA1E20E0038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D19D31E1BA1E20E0038A5E8 /* AppDelegate.swift */; };
 		9D19D3241BA1E20E0038A5E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D19D3221BA1E20E0038A5E8 /* Main.storyboard */; };
 		9D19D3261BA1E20E0038A5E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D19D3251BA1E20E0038A5E8 /* Images.xcassets */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		9D0C0ABE1BA7439700DBBB18 /* TweetDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailController.swift; sourceTree = "<group>"; };
+		9D0C0AC01BA7507D00DBBB18 /* ComposeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeController.swift; sourceTree = "<group>"; };
 		9D19D3191BA1E20E0038A5E8 /* butter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = butter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D19D31D1BA1E20E0038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D19D31E1BA1E20E0038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				9D19D33F1BA1E23A0038A5E8 /* LoginController.swift */,
 				9D19D3411BA1E2890038A5E8 /* TimelineController.swift */,
 				9D0C0ABE1BA7439700DBBB18 /* TweetDetailController.swift */,
+				9D0C0AC01BA7507D00DBBB18 /* ComposeController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				9D19D3421BA1E2890038A5E8 /* TimelineController.swift in Sources */,
 				9D19D31F1BA1E20E0038A5E8 /* AppDelegate.swift in Sources */,
 				9DF4365A1BA350C60054ACF6 /* Tweet.swift in Sources */,
+				9D0C0AC11BA7507D00DBBB18 /* ComposeController.swift in Sources */,
 				9DF436581BA350B80054ACF6 /* User.swift in Sources */,
 				9D0C0ABF1BA7439700DBBB18 /* TweetDetailController.swift in Sources */,
 				9D19D3401BA1E23A0038A5E8 /* LoginController.swift in Sources */,

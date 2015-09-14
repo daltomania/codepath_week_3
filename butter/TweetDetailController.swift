@@ -12,7 +12,6 @@ class TweetDetailController: UIViewController {
 
     var tweet: Tweet?
     @IBOutlet weak var avatarImageView: UIImageView!
-    
     @IBOutlet weak var createdAtLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!

@@ -167,7 +167,20 @@
                             <constraint firstAttribute="trailing" secondItem="WRN-YR-J8w" secondAttribute="trailing" id="hNI-of-tdL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gAw-DS-Ku5"/>
+                    <navigationItem key="navigationItem" id="gAw-DS-Ku5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fij-c0-M4V">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n9y-ib-KUE">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="New">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZlT-MI-KZD" kind="push" identifier="composeSegue" id="syM-yT-6OJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="WRN-YR-J8w" id="Je5-x8-9a5"/>
                     </connections>
@@ -175,6 +188,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnN-Ag-vaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1164" y="406"/>
+        </scene>
+        <!--Compose Controller-->
+        <scene sceneID="LGs-6g-7Sv">
+            <objects>
+                <viewController id="ZlT-MI-KZD" customClass="ComposeController" customModule="butter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CM4-fu-LJ7"/>
+                        <viewControllerLayoutGuide type="bottom" id="r4D-Vu-Fs9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VlI-XA-vP3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OMG" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHy-M1-swi">
+                                <rect key="frame" x="108" y="100" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qqY-HB-A0w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMR-QL-wST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="1053"/>
         </scene>
         <!--Tweet Detail Controller-->
         <scene sceneID="wZ7-c0-wgB">
