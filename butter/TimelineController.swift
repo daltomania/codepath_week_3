@@ -60,14 +60,19 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    
     /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
     */
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vc = segue.destinationViewController as! TweetDetailController
+        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        vc.tweet = tweets[indexPath!.row]
+    }
 
 }
