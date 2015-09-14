@@ -11,11 +11,12 @@ import UIKit
 class ComposeController: UIViewController {
 
     @IBAction func onTweet(sender: AnyObject) {
-        println("Tweeeeeeeeeet")
+        createTweet(tweetTextField.text)
     }
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var tweetTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = "@\(User.currentUser!.screenname!)"
@@ -27,6 +28,13 @@ class ComposeController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func createTweet(status: String) {
+        let params: [String:String] = ["status": status]
+        TwitterClient.sharedInstance.createTweet(params, completion: { (tweets, error) -> () in
+            println("tweet created")
+        })
     }
 
     /*
