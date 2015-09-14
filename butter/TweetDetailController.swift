@@ -20,7 +20,7 @@ class TweetDetailController: UIViewController {
         super.viewDidLoad()
         createdAtLabel.text = tweet?.createdAtString
         tweetLabel.text = tweet?.text
-        usernameLabel.text = tweet?.user?.screenname
+        usernameLabel.text = "@\(tweet?.user!.screenname!)"
         nameLabel.text = tweet?.user?.name
         avatarImageView.setImageWithURL(tweet?.user?.profileImageUrl)
         avatarImageView.layer.cornerRadius = 3

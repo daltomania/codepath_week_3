@@ -10,8 +10,16 @@ import UIKit
 
 class ComposeController: UIViewController {
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameLabel.text = "@\(User.currentUser!.screenname!)"
+        nameLabel.text = User.currentUser?.name
+        avatarImageView.setImageWithURL(User.currentUser?.profileImageUrl)
+        avatarImageView.layer.cornerRadius = 3
+        avatarImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
