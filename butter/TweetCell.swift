@@ -41,10 +41,17 @@ class TweetCell: UITableViewCell {
     @IBAction func favoriteButton(sender: AnyObject) {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
-        TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
-            let image = UIImage(named: "favorite_on")
+        if (tweet!.favorited == 1) {
+            tweet!.favorited == 0
+            let image = UIImage(named: "favorite")
             self.favoriteButton.setImage(image, forState: .Normal)
-        })
+        } else {
+            TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
+                let image = UIImage(named: "favorite_on")
+                self.favoriteButton.setImage(image, forState: .Normal)
+            })
+        }
+
     }
     override func awakeFromNib() {
         super.awakeFromNib()

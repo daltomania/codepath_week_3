@@ -62,9 +62,15 @@ class TweetDetailController: UIViewController {
     func favorite() {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
-        TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
-            println("favorite created!!!!!!!!")
-        })
+        if (tweet?.favorited == 1) {
+            let image = UIImage(named: "favorite")
+            self.favoriteButton.setImage(image, forState: .Normal)
+        } else {
+            TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
+                let image = UIImage(named: "favorite_on")
+                self.favoriteButton.setImage(image, forState: .Normal)
+            })
+        }
     }
     
     func reply() {
