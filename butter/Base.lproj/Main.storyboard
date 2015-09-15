@@ -135,6 +135,7 @@
                                                 <constraint firstItem="fYb-Vq-aDh" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="0qt-iE-v8f"/>
                                                 <constraint firstItem="fYb-Vq-aDh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="njp-cN-ATb" secondAttribute="trailing" constant="8" id="32C-pB-53v"/>
                                                 <constraint firstItem="iMb-5O-0nx" firstAttribute="leading" secondItem="4Mb-si-Bcd" secondAttribute="trailing" constant="10" id="92h-Yk-ZWX"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uWk-AN-IBP" secondAttribute="bottom" constant="8" id="Ajq-Mu-SJm"/>
                                                 <constraint firstItem="IKX-E5-FW1" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="CL9-wm-Trx"/>
                                                 <constraint firstItem="gR7-yu-JYK" firstAttribute="leading" secondItem="IKX-E5-FW1" secondAttribute="trailing" constant="55" id="FB0-Wf-ylB"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iMb-5O-0nx" secondAttribute="trailing" constant="8" id="Gxd-Bu-nnp"/>
@@ -142,6 +143,7 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Mb-si-Bcd" secondAttribute="bottom" constant="8" id="Kgf-u9-jt9"/>
                                                 <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Qoi-3Y-T6G"/>
                                                 <constraint firstItem="uWk-AN-IBP" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leadingMargin" constant="58" id="Qx6-Xr-XrN"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IKX-E5-FW1" secondAttribute="bottom" constant="8" id="QzH-Ty-N2M"/>
                                                 <constraint firstItem="IKX-E5-FW1" firstAttribute="leading" secondItem="uWk-AN-IBP" secondAttribute="trailing" constant="55" id="VLi-ih-DHO"/>
                                                 <constraint firstItem="4Mb-si-Bcd" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leading" constant="8" id="XGX-fO-PfB"/>
                                                 <constraint firstItem="gR7-yu-JYK" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="YHd-Hq-KXc"/>
@@ -150,6 +152,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="fYb-Vq-aDh" secondAttribute="trailing" constant="8" id="lKp-Hg-9Q0"/>
                                                 <constraint firstItem="4Mb-si-Bcd" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="rre-t0-d3Y"/>
                                                 <constraint firstItem="iMb-5O-0nx" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="22" id="teG-dd-IdF"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gR7-yu-JYK" secondAttribute="bottom" constant="8" id="vVV-vP-i17"/>
                                                 <constraint firstItem="FhB-eC-ynS" firstAttribute="leading" secondItem="4Mb-si-Bcd" secondAttribute="trailing" constant="10" id="zkh-CG-U3u"/>
                                             </constraints>
                                         </tableViewCellContentView>
