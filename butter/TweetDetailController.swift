@@ -25,6 +25,8 @@ class TweetDetailController: UIViewController {
     @IBAction func replyButton(sender: AnyObject) {
         reply()
     }
+    @IBOutlet weak var retweenButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,14 @@ class TweetDetailController: UIViewController {
         avatarImageView.setImageWithURL(tweet?.user?.profileImageUrl)
         avatarImageView.layer.cornerRadius = 3
         avatarImageView.clipsToBounds = true
+        if (tweet?.favorited == 1) {
+            let image = UIImage(named: "favorite_on")
+            favoriteButton.setImage(image, forState: .Normal)
+        }
+        if (tweet?.retweeted == 1) {
+            let image = UIImage(named: "retweet_on")
+            retweenButton.setImage(image, forState: .Normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -400,7 +400,9 @@
                     <connections>
                         <outlet property="avatarImageView" destination="KTH-sW-Jdc" id="1rk-LX-3sx"/>
                         <outlet property="createdAtLabel" destination="5uk-0a-DjM" id="SB8-4Q-bIl"/>
+                        <outlet property="favoriteButton" destination="OIo-kX-9hJ" id="saq-qe-Nx3"/>
                         <outlet property="nameLabel" destination="FWe-OE-yjt" id="26O-6M-ysB"/>
+                        <outlet property="retweenButton" destination="XaL-Ev-CWD" id="ntB-Vk-Onn"/>
                         <outlet property="tweetLabel" destination="duM-qv-xEH" id="Ufu-ax-tOQ"/>
                         <outlet property="usernameLabel" destination="HlK-Pe-Bsn" id="N8C-OE-x3N"/>
                     </connections>
