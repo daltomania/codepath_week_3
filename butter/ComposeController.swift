@@ -39,7 +39,6 @@ class ComposeController: UIViewController {
         TwitterClient.sharedInstance.createTweet(params, completion: { (tweets, error) -> () in
             println("tweet created")
         })
-        //self.performSegueWithIdentifier("composeSegue", sender: self)
     }
 
     /*
