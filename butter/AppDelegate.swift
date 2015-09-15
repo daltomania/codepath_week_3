@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if User.currentUser != nil {
             // go to logged in screen
-            var vc = storyboard.instantiateViewControllerWithIdentifier("TimelineViewController") as! UIViewController
+//            var vc = storyboard.instantiateViewControllerWithIdentifier("TimelineViewController") as! UIViewController
+            var vc = storyboard.instantiateViewControllerWithIdentifier("OmgController") as! UIViewController
             window?.rootViewController = vc
         }
         
