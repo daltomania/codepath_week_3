@@ -29,6 +29,8 @@ class TweetCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var retweetCountLabel: UILabel!
+    @IBOutlet weak var favoriteCountLabel: UILabel!
     @IBAction func retweetButton(sender: AnyObject) {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
@@ -65,7 +67,18 @@ class TweetCell: UITableViewCell {
             usernameLabel.text = "@\(tweet.user!.screenname!)"
             tweetLabel.text = tweet.text
             avatarImageView.setImageWithURL(tweet.user?.profileImageUrl)
+            if (tweet.favoriteCount == 0) {
+                favoriteCountLabel.text = ""
+            } else {
+                favoriteCountLabel.text = "\(tweet.favoriteCount!)"
+            }
             
+            if (tweet.retweetedCount == 0) {
+                retweetCountLabel.text = ""
+            } else {
+                retweetCountLabel.text = "\(tweet.retweetedCount!)"
+            }
+
             if (tweet.favorited == 1) {
                 let image = UIImage(named: "favorite_on")
                 favoriteButton.setImage(image, forState: .Normal)

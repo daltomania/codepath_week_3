@@ -27,6 +27,9 @@ class TweetDetailController: UIViewController {
     }
     @IBOutlet weak var retweenButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var favoriteCountLabel: UILabel!
+    
+    @IBOutlet weak var retweetCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,17 @@ class TweetDetailController: UIViewController {
         tweetLabel.text = tweet?.text
         usernameLabel.text = "@\(tweet!.user!.screenname!)"
         nameLabel.text = tweet?.user?.name
+        if (tweet?.favoriteCount == 0) {
+            favoriteCountLabel.text = ""
+        } else {
+            favoriteCountLabel.text = "\(tweet!.favoriteCount!)"
+        }
+        if (tweet?.retweetedCount == 0) {
+            retweetCountLabel.text = ""
+        } else {
+            retweetCountLabel.text = "\(tweet!.retweetedCount!)"
+        }
+        
         avatarImageView.setImageWithURL(tweet?.user?.profileImageUrl)
         avatarImageView.layer.cornerRadius = 3
         avatarImageView.clipsToBounds = true

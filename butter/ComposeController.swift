@@ -30,7 +30,6 @@ class ComposeController: UIViewController {
         if let tweet = tweet {
             tweetTextField.text = "@\(tweet.user!.screenname!) "
         } else {
-            println(tweet?.text)
             tweetTextField.text = ""
         }
     }
