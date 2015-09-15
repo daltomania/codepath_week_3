@@ -69,7 +69,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     
     func replyTo(tweet: Tweet) {
         sourceTweet = tweet
-        performSegueWithIdentifier("replySegue", sender: self)
+        performSegueWithIdentifier("composeSegue", sender: self)
     }
     
     /*
@@ -77,7 +77,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "composeSegue" || segue.identifier == "replySegue") {
+        if (segue.identifier == "composeSegue") {
             var vc = segue.destinationViewController as! ComposeController
             vc.tweet = self.sourceTweet
         } else {

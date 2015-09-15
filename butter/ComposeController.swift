@@ -29,6 +29,9 @@ class ComposeController: UIViewController {
         avatarImageView.clipsToBounds = true
         if let tweet = tweet {
             tweetTextField.text = "@\(tweet.user!.screenname!) "
+        } else {
+            println(tweet?.text)
+            tweetTextField.text = ""
         }
     }
 
