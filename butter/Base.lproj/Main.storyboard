@@ -196,7 +196,7 @@
                                             <outlet property="timeAgoLabel" destination="fYb-Vq-aDh" id="gnh-Uw-tRd"/>
                                             <outlet property="tweetLabel" destination="iMb-5O-0nx" id="8c7-gx-iq8"/>
                                             <outlet property="usernameLabel" destination="njp-cN-ATb" id="PuZ-4j-jCc"/>
-                                            <segue destination="IyI-jT-6qD" kind="push" id="XHP-i9-gqE"/>
+                                            <segue destination="ZlT-MI-KZD" kind="modal" identifier="replySegue" id="ftF-H0-5wF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -458,4 +458,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ftF-H0-5wF"/>
+    </inferredMetricsTieBreakers>
 </document>

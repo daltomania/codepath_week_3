@@ -59,6 +59,7 @@ class TweetDetailController: UIViewController {
     
     func reply() {
         println("you should do something here")
+        performSegueWithIdentifier("replaySegue", sender: self)
     }
     
     

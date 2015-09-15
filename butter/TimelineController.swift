@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TimelineController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimelineController: UIViewController, UITableViewDataSource,
+    UITableViewDelegate, TweetCellProtocol {
 
     var refreshControl: UIRefreshControl!
     var tweets: [Tweet]!
@@ -31,7 +32,6 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
         dummyTableVC.refreshControl = refreshControl
         
         loadTweets()
-        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +57,7 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
         cell.tweet = tweets[indexPath.row]
+        cell.delegate = self
         
         return cell
     }
@@ -65,13 +66,16 @@ class TimelineController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    func replyTo(tweet: Tweet) {
+        performSegueWithIdentifier("replySegue", sender: self)
+    }
     
     /*
     // MARK: - Navigation
     */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "composeSegue") {
+        if (segue.identifier == "composeSegue" || segue.identifier == "replySegue") {
             var vc = segue.destinationViewController as! ComposeController
         } else {
             var vc = segue.destinationViewController as! TweetDetailController

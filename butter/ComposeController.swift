@@ -17,6 +17,8 @@ class ComposeController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var tweetTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = "@\(User.currentUser!.screenname!)"
@@ -35,7 +37,7 @@ class ComposeController: UIViewController {
         TwitterClient.sharedInstance.createTweet(params, completion: { (tweets, error) -> () in
             println("tweet created")
         })
-        self.performSegueWithIdentifier("composeSegue", sender: self)
+        //self.performSegueWithIdentifier("composeSegue", sender: self)
     }
 
     /*

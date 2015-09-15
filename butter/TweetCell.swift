@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol TweetCellProtocol {
+    func replyTo(tweet: Tweet)
+}
+
 class TweetCell: UITableViewCell {
 
+    var delegate: TweetCellProtocol?
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -17,6 +23,9 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var tweetLabel: UILabel!
     
     @IBAction func replyButton(sender: AnyObject) {
+        if let delegate = self.delegate, tweet = tweet {
+            delegate.replyTo(tweet)
+        }
     }
     
     @IBAction func retweetButton(sender: AnyObject) {
