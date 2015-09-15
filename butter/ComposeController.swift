@@ -27,7 +27,9 @@ class ComposeController: UIViewController {
         avatarImageView.setImageWithURL(User.currentUser?.profileImageUrl)
         avatarImageView.layer.cornerRadius = 3
         avatarImageView.clipsToBounds = true
-        println(tweet?.text)
+        if let tweet = tweet {
+            tweetTextField.text = "@\(tweet.user!.screenname!) "
+        }
     }
 
     override func didReceiveMemoryWarning() {
