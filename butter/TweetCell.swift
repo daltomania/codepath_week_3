@@ -58,6 +58,15 @@ class TweetCell: UITableViewCell {
             usernameLabel.text = "@\(tweet.user!.screenname!)"
             tweetLabel.text = tweet.text
             avatarImageView.setImageWithURL(tweet.user?.profileImageUrl)
+            
+            if (tweet.favorited == 1) {
+                let image = UIImage(named: "favorite_on")
+                favoriteButton.setImage(image, forState: .Normal)
+            }
+            if (tweet.retweeted == 1) {
+                let image = UIImage(named: "retweet_on")
+                retweetButton.setImage(image, forState: .Normal)
+            }
         }
     }
 
