@@ -21,7 +21,8 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeAgoLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
-    
+    @IBOutlet weak var retweetButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     @IBAction func replyButton(sender: AnyObject) {
         if let delegate = self.delegate, tweet = tweet {
             delegate.replyTo(tweet)
@@ -32,7 +33,8 @@ class TweetCell: UITableViewCell {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
         TwitterClient.sharedInstance.retweetTweet(params) { (success, error) -> () in
-            println("retweet!!!!!!")
+            let image = UIImage(named: "retweet_on")
+            self.retweetButton.setImage(image, forState: .Normal)
         }
     }
     
@@ -40,7 +42,8 @@ class TweetCell: UITableViewCell {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
         TwitterClient.sharedInstance.createFavorite(params, completion: { (success, error) -> () in
-            println("favorite created!!!!!!!!")
+            let image = UIImage(named: "favorite_on")
+            self.favoriteButton.setImage(image, forState: .Normal)
         })
     }
     override func awakeFromNib() {

@@ -155,7 +155,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="avatarImageView" destination="4Mb-si-Bcd" id="0p9-0v-5OH"/>
+                                            <outlet property="favoriteButton" destination="gR7-yu-JYK" id="w0H-iR-1pO"/>
                                             <outlet property="nameLabel" destination="FhB-eC-ynS" id="w42-vd-wB0"/>
+                                            <outlet property="retweetButton" destination="IKX-E5-FW1" id="kLE-XE-2JL"/>
                                             <outlet property="timeAgoLabel" destination="fYb-Vq-aDh" id="gnh-Uw-tRd"/>
                                             <outlet property="tweetLabel" destination="iMb-5O-0nx" id="8c7-gx-iq8"/>
                                             <outlet property="usernameLabel" destination="njp-cN-ATb" id="PuZ-4j-jCc"/>
