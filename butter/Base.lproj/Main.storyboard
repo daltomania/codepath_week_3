@@ -180,6 +180,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="gAw-DS-Ku5">
                         <barButtonItem key="backBarButtonItem" title="Home" id="cC2-IX-eRP"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Ckh-V8-i8K">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V6L-0s-al9">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogout:" destination="tyZ-Hs-UE5" eventType="touchUpInside" id="oc7-kv-qV6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fij-c0-M4V">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n9y-ib-KUE">
                                 <rect key="frame" x="-23" y="-15" width="71" height="30"/>
