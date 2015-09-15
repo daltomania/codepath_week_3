@@ -18,6 +18,7 @@ class ComposeController: UIViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var tweetTextField: UITextField!
     
+    var tweet: Tweet?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,7 @@ class ComposeController: UIViewController {
         avatarImageView.setImageWithURL(User.currentUser?.profileImageUrl)
         avatarImageView.layer.cornerRadius = 3
         avatarImageView.clipsToBounds = true
+        println(tweet?.text)
     }
 
     override func didReceiveMemoryWarning() {

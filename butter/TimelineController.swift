@@ -13,6 +13,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
 
     var refreshControl: UIRefreshControl!
     var tweets: [Tweet]!
+    var sourceTweet: Tweet?
     
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
@@ -67,6 +68,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     }
     
     func replyTo(tweet: Tweet) {
+        sourceTweet = tweet
         performSegueWithIdentifier("replySegue", sender: self)
     }
     
@@ -77,6 +79,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "composeSegue" || segue.identifier == "replySegue") {
             var vc = segue.destinationViewController as! ComposeController
+            vc.tweet = self.sourceTweet
         } else {
             var vc = segue.destinationViewController as! TweetDetailController
             var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
