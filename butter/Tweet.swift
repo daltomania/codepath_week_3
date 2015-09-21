@@ -20,7 +20,7 @@ class Tweet: NSObject {
     var retweetedCount: Int?
     
     init(dictionary: NSDictionary) {
-        print(dictionary)
+        //print(dictionary)
         user = User(dictionary: dictionary["user"] as! NSDictionary)
         text = dictionary["text"] as? String
         createdAtString = dictionary["created_at"] as? String
