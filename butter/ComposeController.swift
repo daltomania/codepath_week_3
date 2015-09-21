@@ -11,7 +11,7 @@ import UIKit
 class ComposeController: UIViewController {
 
     @IBAction func onTweet(sender: AnyObject) {
-        createTweet(tweetTextField.text)
+        createTweet(tweetTextField.text!)
     }
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -41,7 +41,7 @@ class ComposeController: UIViewController {
     func createTweet(status: String) {
         let params: [String:String] = ["status": status]
         TwitterClient.sharedInstance.createTweet(params, completion: { (tweets, error) -> () in
-            println("tweet created")
+            print("tweet created")
         })
     }
 

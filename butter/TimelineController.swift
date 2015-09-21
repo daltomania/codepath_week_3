@@ -56,7 +56,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetCell
         cell.tweet = tweets[indexPath.row]
         cell.delegate = self
         
@@ -78,11 +78,11 @@ class TimelineController: UIViewController, UITableViewDataSource,
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "composeSegue") {
-            var vc = segue.destinationViewController as! ComposeController
+            let vc = segue.destinationViewController as! ComposeController
             vc.tweet = self.sourceTweet
         } else {
-            var vc = segue.destinationViewController as! TweetDetailController
-            var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+            let vc = segue.destinationViewController as! TweetDetailController
+            let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             vc.tweet = tweets[indexPath!.row]
         }
     }

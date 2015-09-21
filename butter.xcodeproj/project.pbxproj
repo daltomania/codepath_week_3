@@ -237,6 +237,8 @@
 		9D19D3111BA1E20E0038A5E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = daltomania;
 				TargetAttributes = {

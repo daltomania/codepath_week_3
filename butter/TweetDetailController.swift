@@ -69,7 +69,7 @@ class TweetDetailController: UIViewController {
         let id: String = "\(tweet!.id!)"
         let params: [String: String] = ["id": id]
         TwitterClient.sharedInstance.retweetTweet(params) { (success, error) -> () in
-            println("retweet!!!!!!")
+            print("retweet!!!!!!")
         }
     }
     
@@ -88,7 +88,7 @@ class TweetDetailController: UIViewController {
     }
     
     func reply() {
-        println("you should do something here")
+        print("you should do something here")
         performSegueWithIdentifier("replaySegue", sender: self)
     }
     
