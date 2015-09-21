@@ -28,6 +28,8 @@ UITableViewDelegate {
         
         viewControllers.append(timelineNavigationController)
         viewControllers.append(profileNavigationController)
+        
+        🍔ViewController.contentViewController = timelineNavigationController
     }
 
     override func didReceiveMemoryWarning() {
