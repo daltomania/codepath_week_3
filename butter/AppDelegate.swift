@@ -20,9 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if User.currentUser != nil {
             // go to logged in screen
-//            var vc = storyboard.instantiateViewControllerWithIdentifier("TimelineViewController") as! UIViewController
-            let vc = storyboard.instantiateViewControllerWithIdentifier("OmgController") 
+            let vc = storyboard.instantiateViewControllerWithIdentifier("🍔Controller")
             window?.rootViewController = vc
+            let 🍔ViewController = window!.rootViewController as! 🍔Controller
+            let menuViewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController")
+            🍔ViewController.menuViewController = menuViewController
         }
         
         return true
