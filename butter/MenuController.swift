@@ -8,14 +8,19 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+class MenuController: UIViewController, UITableViewDataSource,
+UITableViewDelegate {
 
     var viewControllers: [UIViewController] = []
     private var profileNavigationController: UIViewController!
     private var timelineNavigationController: UIViewController!
+    let titles = ["Timeline", "Profile"]
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         profileNavigationController = storyboard.instantiateViewControllerWithIdentifier("profileNavigationController")
         timelineNavigationController = storyboard.instantiateViewControllerWithIdentifier("timelineNavigationController")
@@ -27,7 +32,20 @@ class MenuController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuCell
+        cell.titleLabel.text = titles[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
     /*
     // MARK: - Navigation

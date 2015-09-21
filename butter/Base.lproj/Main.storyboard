@@ -54,21 +54,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l0L-fd-XJd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenuCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="l0L-fd-XJd" customClass="MenuCell" customModule="butter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l0L-fd-XJd" id="SaB-tM-nMU">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-pY-ZL2">
-                                                    <rect key="frame" x="13" y="11" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-pY-ZL2">
+                                                    <rect key="frame" x="13" y="11" width="49" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nYa-pY-ZL2" firstAttribute="top" secondItem="SaB-tM-nMU" secondAttribute="top" constant="11" id="FDa-n8-hcw"/>
+                                                <constraint firstItem="nYa-pY-ZL2" firstAttribute="leading" secondItem="SaB-tM-nMU" secondAttribute="leading" constant="13" id="SBH-Ix-zYz"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nYa-pY-ZL2" secondAttribute="trailing" constant="8" id="XDE-UJ-Cd6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="nYa-pY-ZL2" id="NYv-Dg-KFt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -81,6 +89,9 @@
                             <constraint firstItem="NxI-qg-DHy" firstAttribute="leading" secondItem="oGf-Oa-yfd" secondAttribute="leading" id="wiU-ee-fO8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="NxI-qg-DHy" id="g4y-Kx-qV9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O15-Mg-5cL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

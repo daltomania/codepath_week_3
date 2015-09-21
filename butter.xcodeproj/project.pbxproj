@@ -20,6 +20,7 @@
 		9DA9FABB1BB098A9008F3B48 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9FABA1BB098A9008F3B48 /* ProfileController.swift */; settings = {ASSET_TAGS = (); }; };
 		9DA9FABD1BB098F4008F3B48 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9FABC1BB098F4008F3B48 /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
 		9DA9FABF1BB09F82008F3B48 /* 🍔Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9FABE1BB09F82008F3B48 /* 🍔Controller.swift */; settings = {ASSET_TAGS = (); }; };
+		9DA9FAC31BB0ADA3008F3B48 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA9FAC21BB0ADA3008F3B48 /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
 		9DF436581BA350B80054ACF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF436571BA350B80054ACF6 /* User.swift */; };
 		9DF4365A1BA350C60054ACF6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF436591BA350C60054ACF6 /* Tweet.swift */; };
 		9DF436601BA3916F0054ACF6 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF4365F1BA3916F0054ACF6 /* TweetCell.swift */; };
@@ -54,6 +55,7 @@
 		9DA9FABA1BB098A9008F3B48 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		9DA9FABC1BB098F4008F3B48 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		9DA9FABE1BB09F82008F3B48 /* 🍔Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "🍔Controller.swift"; sourceTree = "<group>"; };
+		9DA9FAC21BB0ADA3008F3B48 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		9DCA3A8C1BA1E53400A09FA5 /* butter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "butter-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DF436571BA350B80054ACF6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9DF436591BA350C60054ACF6 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF4365F1BA3916F0054ACF6 /* TweetCell.swift */,
+				9DA9FAC21BB0ADA3008F3B48 /* MenuCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				9DF436581BA350B80054ACF6 /* User.swift in Sources */,
 				9DA9FABF1BB09F82008F3B48 /* 🍔Controller.swift in Sources */,
 				9D0C0ABF1BA7439700DBBB18 /* TweetDetailController.swift in Sources */,
+				9DA9FAC31BB0ADA3008F3B48 /* MenuCell.swift in Sources */,
 				9D19D3401BA1E23A0038A5E8 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
