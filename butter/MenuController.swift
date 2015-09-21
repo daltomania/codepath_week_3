@@ -12,6 +12,7 @@ class MenuController: UIViewController, UITableViewDataSource,
 UITableViewDelegate {
 
     var viewControllers: [UIViewController] = []
+    var 🍔ViewController: 🍔Controller!
     private var profileNavigationController: UIViewController!
     private var timelineNavigationController: UIViewController!
     let titles = ["Timeline", "Profile"]
@@ -25,8 +26,8 @@ UITableViewDelegate {
         profileNavigationController = storyboard.instantiateViewControllerWithIdentifier("profileNavigationController")
         timelineNavigationController = storyboard.instantiateViewControllerWithIdentifier("timelineNavigationController")
         
-        viewControllers.append(profileNavigationController)
         viewControllers.append(timelineNavigationController)
+        viewControllers.append(profileNavigationController)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +46,7 @@ UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        🍔ViewController.contentViewController = viewControllers[indexPath.row]
     }
 
     /*

@@ -23,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyboard.instantiateViewControllerWithIdentifier("🍔Controller")
             window?.rootViewController = vc
             let 🍔ViewController = window!.rootViewController as! 🍔Controller
-            let menuViewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController")
+            let menuViewController = storyboard.instantiateViewControllerWithIdentifier("menuViewController") as! MenuController
             🍔ViewController.menuViewController = menuViewController
+            menuViewController.🍔ViewController = 🍔ViewController
         }
         
         return true

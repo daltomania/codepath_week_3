@@ -16,6 +16,17 @@ class 🍔Controller: UIViewController {
             menuView.addSubview(menuViewController.view)
         }
     }
+    var contentViewController: UIViewController! {
+        didSet {
+            view.layoutIfNeeded()
+            contentView.addSubview(contentViewController.view)
+            
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.leftMarginConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
     
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
