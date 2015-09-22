@@ -254,6 +254,16 @@
                                                     <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-KH-cvU">
+                                                    <rect key="frame" x="8" y="8" width="47" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="47" id="1bp-ol-17d"/>
+                                                        <constraint firstAttribute="height" constant="48" id="obC-UV-75G"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="profileButton:" destination="1OV-Io-Wgk" eventType="touchUpInside" id="pR8-dB-IvZ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FhB-eC-ynS" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="0Nj-bv-fmC"/>
@@ -271,6 +281,7 @@
                                                 <constraint firstItem="njp-cN-ATb" firstAttribute="leading" secondItem="FhB-eC-ynS" secondAttribute="trailing" constant="8" id="Qoi-3Y-T6G"/>
                                                 <constraint firstItem="uWk-AN-IBP" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leadingMargin" constant="58" id="Qx6-Xr-XrN"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IKX-E5-FW1" secondAttribute="bottom" constant="8" id="QzH-Ty-N2M"/>
+                                                <constraint firstItem="wQY-KH-cvU" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="VIE-fb-hyj"/>
                                                 <constraint firstItem="IKX-E5-FW1" firstAttribute="leading" secondItem="uWk-AN-IBP" secondAttribute="trailing" constant="55" id="VLi-ih-DHO"/>
                                                 <constraint firstItem="4Mb-si-Bcd" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leading" constant="8" id="XGX-fO-PfB"/>
                                                 <constraint firstItem="gR7-yu-JYK" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="8" id="YHd-Hq-KXc"/>
@@ -278,6 +289,7 @@
                                                 <constraint firstItem="eBY-Oi-VjN" firstAttribute="top" secondItem="iMb-5O-0nx" secondAttribute="bottom" constant="12" id="h9b-gM-w4S"/>
                                                 <constraint firstItem="njp-cN-ATb" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="kON-SF-CkL"/>
                                                 <constraint firstAttribute="trailing" secondItem="fYb-Vq-aDh" secondAttribute="trailing" constant="8" id="lKp-Hg-9Q0"/>
+                                                <constraint firstItem="wQY-KH-cvU" firstAttribute="leading" secondItem="q3O-gd-Yyl" secondAttribute="leading" constant="8" id="p35-zc-CW5"/>
                                                 <constraint firstItem="4Mb-si-Bcd" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="8" id="rre-t0-d3Y"/>
                                                 <constraint firstItem="iMb-5O-0nx" firstAttribute="top" secondItem="q3O-gd-Yyl" secondAttribute="top" constant="22" id="teG-dd-IdF"/>
                                                 <constraint firstItem="hAk-Zt-Z69" firstAttribute="leading" secondItem="gR7-yu-JYK" secondAttribute="trailing" constant="4" id="vS0-9U-sYy"/>
@@ -431,14 +443,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@benkallman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlK-Pe-Bsn">
-                                <rect key="frame" x="72" y="90" width="74" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@benkallman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlK-Pe-Bsn">
+                                <rect key="frame" x="72" y="90" width="76" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is another tweet. It's so cool. I'm loving this." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duM-qv-xEH">
-                                <rect key="frame" x="16" y="128" width="273" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is another tweet. It's so cool. I'm loving this." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duM-qv-xEH">
+                                <rect key="frame" x="16" y="128" width="275" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -452,8 +464,8 @@
                                 <color key="textColor" red="0.69391177400000004" green="0.69391177400000004" blue="0.69391177400000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ben Kallman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-OE-yjt">
-                                <rect key="frame" x="72" y="72" width="72" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben Kallman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-OE-yjt">
+                                <rect key="frame" x="72" y="72" width="75" height="15"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

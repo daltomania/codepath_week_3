@@ -31,7 +31,6 @@ class ProfileController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
     /*
     // MARK: - Navigation
 

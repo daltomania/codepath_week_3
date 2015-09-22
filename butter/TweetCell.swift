@@ -55,6 +55,11 @@ class TweetCell: UITableViewCell {
         }
 
     }
+    
+    @IBAction func profileButton(sender: AnyObject) {
+        print("OMG")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         avatarImageView.layer.cornerRadius = 3
