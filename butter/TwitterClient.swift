@@ -82,7 +82,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()) {
         loginCompletion = completion
         
-        // fetch request token & redirect ot auth page
+        // fetch request token & redirect to auth page
         TwitterClient.sharedInstance.requestSerializer.removeAccessToken()
         TwitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "cptwitterdemo://oauth"), scope: nil,
             success: { (requestToken: BDBOAuth1Credential!) -> Void in
