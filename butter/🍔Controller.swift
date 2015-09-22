@@ -16,6 +16,7 @@ class 🍔Controller: UIViewController {
             menuView.addSubview(menuViewController.view)
         }
     }
+    var timelineType: String! // TODO: is there a better way?!
     var contentViewController: UIViewController! {
         didSet(oldContentViewController) {
             view.layoutIfNeeded()
