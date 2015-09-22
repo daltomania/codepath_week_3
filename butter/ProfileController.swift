@@ -30,7 +30,6 @@ class ProfileController: UIViewController {
         followersCountLabel.text = "\(user!.followersCount!)"
         tweetCountLabel.text = "\(user!.tweetCount!)"
         profileImage.setImageWithURL(user!.profileImageUrl)
-        print(user!.profileBannerImageUrl)
         if user!.profileBannerImageUrl != nil {
             backgroundImage.setImageWithURL(user!.profileBannerImageUrl)
         }
