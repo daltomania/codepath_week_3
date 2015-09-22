@@ -261,7 +261,7 @@
                                                         <constraint firstAttribute="height" constant="48" id="obC-UV-75G"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="profileButton:" destination="1OV-Io-Wgk" eventType="touchUpInside" id="pR8-dB-IvZ"/>
+                                                        <segue destination="de4-MG-YKn" kind="push" identifier="profileSegue" id="qpd-6n-AuM"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -666,4 +666,7 @@
         <image name="reply" width="16" height="16"/>
         <image name="retweet" width="19" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qpd-6n-AuM"/>
+    </inferredMetricsTieBreakers>
 </document>

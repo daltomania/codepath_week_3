@@ -36,8 +36,6 @@ class User: NSObject {
         followersCount = dictionary["followers_count"] as? Int
         followingCount = dictionary["friends_count"] as? Int
         tweetCount = dictionary["statuses_count"] as? Int
-        
-        print(dictionary)
     }
     
     func logout() {

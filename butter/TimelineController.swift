@@ -77,9 +77,15 @@ class TimelineController: UIViewController, UITableViewDataSource,
     */
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "composeSegue") {
+        if segue.identifier == "composeSegue" {
             let vc = segue.destinationViewController as! ComposeController
             vc.tweet = self.sourceTweet
+        } else if segue.identifier == "profileSegue" {
+            let vc = segue.destinationViewController as! ProfileController
+            let button = sender as! UIButton
+            let view = button.superview!
+            let cell = view.superview as! TweetCell
+            vc.user = tweets[tableView.indexPathForCell(cell)!.row].user
         } else {
             let vc = segue.destinationViewController as! TweetDetailController
             let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)

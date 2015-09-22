@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileController: UIViewController {
+    var user: User?
+    
     @IBOutlet weak var tweetCountLabel: UILabel!
     @IBOutlet weak var followingCountLabel: UILabel!
     @IBOutlet weak var followersCountLabel: UILabel!
@@ -16,11 +18,16 @@ class ProfileController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        followingCountLabel.text = "\(User.currentUser!.followingCount!)"
-        followersCountLabel.text = "\(User.currentUser!.followersCount!)"
-        tweetCountLabel.text = "\(User.currentUser!.tweetCount!)"
-        profileImage.setImageWithURL(User.currentUser?.profileImageUrl)
-        if User.currentUser?.profileBannerImageUrl != nil {
+
+        if user == nil {
+            user = User.currentUser
+        }
+        
+        followingCountLabel.text = "\(user!.followingCount!)"
+        followersCountLabel.text = "\(user!.followersCount!)"
+        tweetCountLabel.text = "\(user!.tweetCount!)"
+        profileImage.setImageWithURL(user!.profileImageUrl)
+        if user!.profileBannerImageUrl != nil {
             backgroundImage.setImageWithURL(User.currentUser?.profileBannerImageUrl)
         }
         profileImage.layer.cornerRadius = 3
