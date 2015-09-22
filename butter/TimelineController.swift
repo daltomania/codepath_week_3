@@ -41,20 +41,19 @@ class TimelineController: UIViewController, UITableViewDataSource,
     }
     
     func loadTweets() {
-        if timelineType == "mentions" {
-            TwitterClient.sharedInstance.mentionsTimelineWithParams(nil, completion: { (tweets, error) -> () in
-                self.tweets = tweets
-                self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
-            })
-        } else {
+        if timelineType == nil || timelineType == "home" {
             TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
                 self.tweets = tweets
                 self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
             })
+        } else if timelineType == "mentions" {
+            TwitterClient.sharedInstance.mentionsTimelineWithParams(nil, completion: { (tweets, error) -> () in
+                self.tweets = tweets
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            })
         }
-
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
