@@ -21,14 +21,18 @@ class ProfileController: UIViewController {
 
         if user == nil {
             user = User.currentUser
+            navigationItem.title = "Me"
+        } else {
+            navigationItem.title = user?.screenname
         }
         
         followingCountLabel.text = "\(user!.followingCount!)"
         followersCountLabel.text = "\(user!.followersCount!)"
         tweetCountLabel.text = "\(user!.tweetCount!)"
         profileImage.setImageWithURL(user!.profileImageUrl)
+        print(user!.profileBannerImageUrl)
         if user!.profileBannerImageUrl != nil {
-            backgroundImage.setImageWithURL(User.currentUser?.profileBannerImageUrl)
+            backgroundImage.setImageWithURL(user!.profileBannerImageUrl)
         }
         profileImage.layer.cornerRadius = 3
         profileImage.clipsToBounds = true
