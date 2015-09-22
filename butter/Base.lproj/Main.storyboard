@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="632" y="-263"/>
         </scene>
-        <!--Profile Controller-->
+        <!--Me-->
         <scene sceneID="CPA-7U-eNP">
             <objects>
                 <viewController id="de4-MG-YKn" customClass="ProfileController" customModule="butter" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,9 +108,42 @@
                     <view key="view" contentMode="scaleToFill" id="z4c-da-PlF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-9h-7zI">
+                                <rect key="frame" x="0.0" y="64" width="320" height="131"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSk-ae-Y7L">
+                                <rect key="frame" x="136" y="72" width="48" height="48"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-e0-xVk">
+                                <rect key="frame" x="14" y="203" width="28" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-PP-Ufm">
+                                <rect key="frame" x="144" y="203" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="571" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50K-Eb-Agq">
+                                <rect key="frame" x="273" y="203" width="27" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0fR-IJ-HmN"/>
+                    <navigationItem key="navigationItem" title="Me" id="0fR-IJ-HmN"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="EJD-9h-7zI" id="7MV-Ky-M3x"/>
+                        <outlet property="followersCountLabel" destination="rzj-PP-Ufm" id="vaf-0P-VOg"/>
+                        <outlet property="followingCountLabel" destination="50K-Eb-Agq" id="c18-VD-yGl"/>
+                        <outlet property="profileImage" destination="MSk-ae-Y7L" id="b0H-d7-Irl"/>
+                        <outlet property="tweetCountLabel" destination="WoL-e0-xVk" id="6cA-13-no1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vup-Kb-ILk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
