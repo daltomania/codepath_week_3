@@ -14,8 +14,9 @@ UITableViewDelegate {
     var viewControllers: [UIViewController] = []
     var 🍔ViewController: 🍔Controller!
     private var profileNavigationController: UIViewController!
-    private var timelineNavigationController: UIViewController!
-    let titles = ["Timeline", "Profile"]
+    private var timelineNavigationController: TimelineNavigationViewController!
+    private var mentionsNavigationController: TimelineNavigationViewController!
+    let titles = ["Timeline", "Mentions", "Profile"]
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -24,9 +25,13 @@ UITableViewDelegate {
         tableView.dataSource = self
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         profileNavigationController = storyboard.instantiateViewControllerWithIdentifier("profileNavigationController")
-        timelineNavigationController = storyboard.instantiateViewControllerWithIdentifier("timelineNavigationController")
+        timelineNavigationController = storyboard.instantiateViewControllerWithIdentifier("timelineNavigationController") as! TimelineNavigationViewController
+        timelineNavigationController.timelineType = "home"
+        mentionsNavigationController = storyboard.instantiateViewControllerWithIdentifier("timelineNavigationController") as! TimelineNavigationViewController
+        mentionsNavigationController.timelineType = "mentions"
         
         viewControllers.append(timelineNavigationController)
+        viewControllers.append(mentionsNavigationController)
         viewControllers.append(profileNavigationController)
         
         🍔ViewController.contentViewController = timelineNavigationController

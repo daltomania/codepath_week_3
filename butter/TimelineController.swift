@@ -14,6 +14,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
     var refreshControl: UIRefreshControl!
     var tweets: [Tweet]!
     var sourceTweet: Tweet?
+    var timelineType: String!
     
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
@@ -31,7 +32,7 @@ class TimelineController: UIViewController, UITableViewDataSource,
         let dummyTableVC = UITableViewController()
         dummyTableVC.tableView = tableView
         dummyTableVC.refreshControl = refreshControl
-        
+
         loadTweets()
     }
 
@@ -40,11 +41,20 @@ class TimelineController: UIViewController, UITableViewDataSource,
     }
     
     func loadTweets() {
-        TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
-            self.tweets = tweets
-            self.tableView.reloadData()
-            self.refreshControl.endRefreshing()
-        })
+        if timelineType == "mentions" {
+            TwitterClient.sharedInstance.mentionsTimelineWithParams(nil, completion: { (tweets, error) -> () in
+                self.tweets = tweets
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            })
+        } else {
+            TwitterClient.sharedInstance.homeTimelineWithParams(nil, completion: { (tweets, error) -> () in
+                self.tweets = tweets
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            })
+        }
+
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
